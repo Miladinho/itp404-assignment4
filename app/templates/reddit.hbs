@@ -1,0 +1,17 @@
+<h1>Assignment 4: Reddit</h1>
+
+<ul>
+  {{#each model as |reddit|}}
+    <li>
+      <p>Score: {{reddit.data.score}}</p>
+      <p>Title: {{reddit.data.url}}</P>
+      <p>Comment Count: {{reddit.data.num_comments}}</P>
+      {{#if reddit.data.archived}}
+        <p>Archived</P>
+      {{else}}
+        <p>Not Archived</p>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
+{{outlet}}
